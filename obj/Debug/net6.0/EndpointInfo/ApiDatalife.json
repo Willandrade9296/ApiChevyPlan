@@ -1,0 +1,738 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ApiDatalife",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/CargasFamiliares": {
+      "post": {
+        "tags": [
+          "CargasFamiliares"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CargasFamiliaresIng"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CargasFamiliaresIng"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CargasFamiliaresIng"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Empleado": {
+      "get": {
+        "tags": [
+          "Empleado"
+        ],
+        "parameters": [
+          {
+            "name": "cedula",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "compania",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Empleado/Ingreso": {
+      "post": {
+        "tags": [
+          "Empleado"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Empleado/Ficha": {
+      "post": {
+        "tags": [
+          "Empleado"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Empleado/Imagen": {
+      "post": {
+        "tags": [
+          "Empleado"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fotos": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "datos_Empleado": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "fotos": {
+                  "style": "form"
+                },
+                "datos_Empleado": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Empleado/Desvinculacion": {
+      "post": {
+        "tags": [
+          "Empleado"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EmpleadoIng"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HelloWorld": {
+      "get": {
+        "tags": [
+          "HelloWorld"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Vacaciones": {
+      "get": {
+        "tags": [
+          "Vacaciones"
+        ],
+        "parameters": [
+          {
+            "name": "cedula",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "compania",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Vacaciones"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/VacacionesIng"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/VacacionesIng"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/VacacionesIng"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CargasFamiliaresIng": {
+        "type": "object",
+        "properties": {
+          "codigoTransaccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "cedulaTrabajador": {
+            "type": "string",
+            "nullable": true
+          },
+          "cedulaCarga": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoParentezco": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombresApellidosCarga": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoGenero": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaNacimientoCarga": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "conDiscapacidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "indUtilidades": {
+            "type": "string",
+            "nullable": true
+          },
+          "indCargaFamiliar": {
+            "type": "string",
+            "nullable": true
+          },
+          "indIRE": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaMuerteCarga": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nombreCiudadCarga": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccionCarga": {
+            "type": "string",
+            "nullable": true
+          },
+          "cargaVinculo": {
+            "type": "string",
+            "nullable": true
+          },
+          "gradoFamiliaridad": {
+            "type": "string",
+            "nullable": true
+          },
+          "cargoCarga": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmpleadoIng": {
+        "type": "object",
+        "properties": {
+          "codigoTransaccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "cedulaTrabajador": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombres": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellidos": {
+            "type": "string",
+            "nullable": true
+          },
+          "identificacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "idEmpresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "cargo": {
+            "type": "string",
+            "nullable": true
+          },
+          "area": {
+            "type": "string",
+            "nullable": true
+          },
+          "departamento": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais": {
+            "type": "string",
+            "nullable": true
+          },
+          "mail": {
+            "type": "string",
+            "nullable": true
+          },
+          "celular": {
+            "type": "string",
+            "nullable": true
+          },
+          "mailCorporativo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaIngreso": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tipoIdentificacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "idGenero": {
+            "type": "string",
+            "nullable": true
+          },
+          "idPaisOrigen": {
+            "type": "string",
+            "nullable": true
+          },
+          "subarea": {
+            "type": "string",
+            "nullable": true
+          },
+          "jefe": {
+            "type": "string",
+            "nullable": true
+          },
+          "aprobadorVacaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoContrato": {
+            "type": "string",
+            "nullable": true
+          },
+          "beneficioSeguro": {
+            "type": "string",
+            "nullable": true
+          },
+          "sueldo": {
+            "type": "number",
+            "format": "double"
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "personaSustituto": {
+            "type": "string",
+            "nullable": true
+          },
+          "porcentajeDiscapacidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoDiscapacidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "sectorDireccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "estadoCivil": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoBanco": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCuenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreContactoEmergencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "parentescoContactoEmergencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefonoContactoEmergencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoCiudadResidencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoTipoSangre": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroCasa": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPosicion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaSalida": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "causaSalida": {
+            "type": "string",
+            "nullable": true
+          },
+          "motivoSalida": {
+            "type": "string",
+            "nullable": true
+          },
+          "empresa": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "baseDatos": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VacacionesIng": {
+        "type": "object",
+        "properties": {
+          "codigoTransaccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "cedulaTrabajador": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaInicialNovedad": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaFinalNovedad": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dias": {
+            "type": "number",
+            "format": "double"
+          },
+          "motivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "observacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoCompania": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Ingresa tu token JWT aquí",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
