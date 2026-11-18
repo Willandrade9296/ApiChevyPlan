@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiDatalife")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15c1157e7c175b89c6327a69d18635be7d5ec619")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a5ebd25ceb9dc18a49813033a31e704719acfc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiDatalife")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiDatalife")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
